@@ -4,6 +4,9 @@ MEAN-seed
 
 A bootstrapp application based on MongoDB, Express, Angular, Node, Passport.
 
+Also includes an implementation of this [Blog project](https://github.com/makingsensetraining/blog-example). The same AngularJS side with a backend Blog API.
+
+
 ### Requirements
 
 - Node and NPM
@@ -40,5 +43,9 @@ In order to execute all tests and validate the code you could run:
 For coverage run:
 
 `grunt coverage`
+
+For executing API integration test go to:
+```/test/backend-integration-tests/spec/blog``` directory and execute:
+```mocha blog.js```
 
 If you have any issue with testing environment please read [known errors](https://github.com/MakingSense/mean-seed/wiki/Known-errors) page.

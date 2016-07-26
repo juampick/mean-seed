@@ -22,9 +22,9 @@ describe('Blog#BlogController', function () {
 
   var posts = {
     "_id": "5ecc7850-4ac5-11e6-958e-edc6f4d97e24",
-    "title": "juampiv2",
+    "title": "TestTitle",
     "__v": 0,
-    "text": "juampi descriptions"
+    "text": "TestText"
   };
 
   var postParam = {
@@ -42,6 +42,8 @@ describe('Blog#BlogController', function () {
 
     it('shout retrieve the posts and return the expected response', function (done) {
 
+      serviceGetPostStub.callsArgWith(0, null, { post: posts });
+
       // Call to the controller method
       blogController.getPosts({
         body:{}
@@ -54,7 +56,6 @@ describe('Blog#BlogController', function () {
         }
       });
 
-      serviceGetPostStub.callArgWith(0, null, { post: posts });
     });
 
     it('should fail to get the posts', function (done) {
